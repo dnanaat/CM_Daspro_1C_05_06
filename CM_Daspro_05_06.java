@@ -44,5 +44,24 @@ public class CM_Daspro_05_06 {
             }
         }
     }
+
+    
+    static void tambahStok() {
+        tampilkanInventori();
+        System.out.print("\nMasukkan nomor item : ");
+        int nomor = sc.nextInt() - 1;
+        if (nomor >= 0 && nomor < namaItem.length && namaItem[nomor] != null) {
+            System.out.print("Masukkan jumlah stok yang ingin ditambahkan : ");
+            int jumlah = sc.nextInt();
+            if (jumlah == 0) {
+                System.out.print("Jumlah harus lebih dari 0, silahkan input kembali : ");
+                jumlah = sc.nextInt();
+            }
+            stokItem[nomor] += jumlah;
+            System.out.println("Stok " + namaItem[nomor] + " berhasil ditambahkan. Stok sekarang : " + stokItem[nomor]);
+        } else {
+            System.out.println("Item tidak ditemukan");
+        }
+    }
     
 }

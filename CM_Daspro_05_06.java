@@ -34,6 +34,8 @@ public class CM_Daspro_05_06 {
                 tampilkanInventori();
             } else if (pilihan == 2) {
                 tambahStok();
+            } else if (pilihan == 3) {
+                tambahItemBaru();
             }
         }
     }
@@ -50,7 +52,6 @@ public class CM_Daspro_05_06 {
         }
     }
 
-    
     static void tambahStok() {
         tampilkanInventori();
         System.out.print("\nMasukkan nomor item : ");
@@ -66,6 +67,20 @@ public class CM_Daspro_05_06 {
             System.out.println("Stok " + namaItem[nomor] + " berhasil ditambahkan. Stok sekarang : " + stokItem[nomor]);
         } else {
             System.out.println("Item tidak ditemukan");
+        }
+    }
+
+    static void tambahItemBaru() {
+        sc.nextLine();
+        System.out.print("\nMasukkan nama item baru : ");
+        String namaBaru = sc.nextLine();
+        System.out.print("Masukkan kategori item baru : ");
+        String kategoriBaru = sc.nextLine();
+        System.out.print("Masukkan jumlah stok awal : ");
+        int stokBaru = sc.nextInt();
+        if (stokBaru == 0) {
+            System.out.print("Input harus lebih dari 0, silahkan input kembali : ");
+            stokBaru = sc.nextInt();
         }
     }
     

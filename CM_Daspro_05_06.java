@@ -30,6 +30,11 @@ public class CM_Daspro_05_06 {
             System.out.print("\nPilih menu: ");
             int pilihan = sc.nextInt();
 
+            if (pilihan == 1) {
+                tampilkanInventori();
+            } else if (pilihan == 2) {
+                tambahStok();
+            }
         }
     }
 

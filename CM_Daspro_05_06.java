@@ -32,5 +32,17 @@ public class CM_Daspro_05_06 {
 
         }
     }
+
+    static void tampilkanInventori() {
+        System.out.println("\n===== DATA INVENTORI =====");
+        System.out.println("No   Nama Item          Kategori   Stok");
+        System.out.println("------------------------------------------");
+
+        for (int i = 0; i < namaItem.length; i++) {
+            if (namaItem[i] != null) {
+                System.out.println((i + 1) + ".   " + namaItem[i] + "\t\t" + kategoriItem[i] + "\t   " + stokItem[i]);
+            }
+        }
+    }
     
 }

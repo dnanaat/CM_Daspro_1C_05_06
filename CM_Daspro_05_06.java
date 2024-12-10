@@ -36,6 +36,11 @@ public class CM_Daspro_05_06 {
                 tambahStok();
             } else if (pilihan == 3) {
                 tambahItemBaru();
+            } else if (pilihan == 4) {
+                System.out.println("Keluar dari program");
+                break;
+            } else {
+                System.out.println("Pilihan tidak valid. Silakan coba lagi");
             }
         }
     }
@@ -82,6 +87,17 @@ public class CM_Daspro_05_06 {
             System.out.print("Input harus lebih dari 0, silahkan input kembali : ");
             stokBaru = sc.nextInt();
         }
+
+        for (int i = 0; i < namaItem.length; i++) {
+            if (namaItem[i] == null) {
+                namaItem[i] = namaBaru;
+                kategoriItem[i] = kategoriBaru;
+                stokItem[i] = stokBaru;
+                System.out.println("Item baru berhasil ditambahkan adalah " + namaBaru + " dengan jumlah " + stokBaru);
+                return;
+            }
+        }
+        System.out.println("Tidak ada slot kosong untuk item baru");
+    sc.close();
     }
-    
 }
